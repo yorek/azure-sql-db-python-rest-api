@@ -22,9 +22,9 @@ Guidance on onboarding samples to docs.microsoft.com/samples: https://review.doc
 Taxonomies for products and languages: https://review.docs.microsoft.com/new-hope/information-architecture/metadata/taxonomies?branch=master
 -->
 
-Thanks to native JSON support, creating a REST API with Azure SQL and Python is really a matter of a few lines of code. Take a look at `app.py` to easy it is!
+Thanks to native JSON support, creating a REST API with Azure SQL and Python is really a matter of a few lines of code. Take a look at `app.py` to see how easy it is!
 
-Wondering what's the magic behind? The sample uses the well known [Flask](https://flask.palletsprojects.com/en/1.1.x/) micro-framework and the [flask-restful](https://flask-restful.readthedocs.io/en/latest/) package to easily implement REST APIs. Beside that the [native JSON support that Azure SQL provides](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-json-features) does all the heavy lifting so sending data back and forth to the database is as easy as sending a JSON message.
+Wondering what's the magic behind? The sample uses the well known [Flask](https://flask.palletsprojects.com/en/1.1.x/) micro-framework and the [flask-restful](https://flask-restful.readthedocs.io/en/latest/) package to easily implement REST APIs. Beside that, the [native JSON support that Azure SQL provides](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-json-features) does all the heavy lifting so sending data back and forth to the database is as easy as sending a JSON message.
 
 ## Install Sample Database
 
@@ -34,7 +34,7 @@ In order to run this sample, the WideWorldImporters database is needed. Install 
 
 ## Add Database Objects
 
-Once the sample database has been installed, you need to add some stored procedure that will called from Python. The SQL code is available here:
+Once the sample database has been installed, you need to add some stored procedures that will be called from Python. The SQL code is available here:
 
 `./sql/WideWorldImportersUpdates.sql`
 
@@ -42,7 +42,7 @@ If you need any help in executing the SQL script, you can find a Quickstart here
 
 ## Run sample locally
 
-Make sure you have Python 3.7 installed on your machine. Clone this repo in a directory on our computer and then create a [virtual environment](https://www.youtube.com/watch?v=_eczHOiFMZA&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=34). For example:
+Make sure you have Python 3.7 installed on your machine. Clone this repo in a directory on your computer and then create a [virtual environment](https://www.youtube.com/watch?v=_eczHOiFMZA&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=34). For example:
 
 ```bash
 virtualenv venv --python C:\Python37\
@@ -82,7 +82,7 @@ Your connection string is something like:
 DRIVER={ODBC Driver 17 for SQL Server};SERVER=<your-server-name>.database.windows.net;DATABASE=<your-database-name>;UID=PythonWebApp;PWD=a987REALLY#$%TRONGpa44w0rd
 ```
 
-Just replace `<your-server-name>` and `<your-database-name>` with the correct values for your environment.
+Just replace `<your-server-name>` and `<your-database-name>` with the correct values for your environment. User and Password are created in the script. Change them once everything is working to make sure your database will be accessible only by trusted accounts. The provided User and Password are there just to make the deployment process and the first run experince easier.
 
 To run and test the Python REST API local, just run
 
